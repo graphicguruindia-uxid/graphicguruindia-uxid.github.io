@@ -1,1 +1,1 @@
-# graphicguruindia.github.io
+# graphicguruindia-uxid.github.io
