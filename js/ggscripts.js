@@ -1,25 +1,36 @@
 $(function() {
     'use strict';
-    $('body').css('padding-top', $('#header').outerHeight());
-    $(window).resize(function() { $('body').css('padding-top', $('#header').outerHeight()); });
 
-    //Navigation Scrolling
+    // Keep the body offset in sync with the fixed header height
+    function syncHeaderOffset() {
+        $('body').css('padding-top', $('#header').outerHeight() + 4);
+    }
+    syncHeaderOffset();
+    $(window).resize(syncHeaderOffset);
+
+    // Navigation smooth scrolling + active state on click
     $('.nav a').click(function(e) {
         $('#navbar-menu li').removeClass('active');
         $(this).parent().addClass('active');
-        var $scroll = $(this.hash).offset().top;
-        $scroll = $scroll - 80;
-        $('html,body').animate({
-            scrollTop: $scroll
-        }, 500);
+        var $target = $(this.hash);
+        if ($target.length) {
+            var scrollTo = $target.offset().top - 80;
+            $('html,body').animate({ scrollTop: scrollTo }, 500);
+        }
         e.preventDefault();
+
+        // Close the mobile menu after tapping a nav link (Bootstrap 5)
+        if ($(window).width() < 768 && window.bootstrap && window.bootstrap.Collapse) {
+            var menuEl = document.getElementById('navbar-menu');
+            if (menuEl && menuEl.classList.contains('show')) {
+                window.bootstrap.Collapse.getOrCreateInstance(menuEl).hide();
+            }
+        }
     });
 
-    // Scroll to top button	
+    // Scroll to top button
     $('#scroll-top').click(function() {
-        $('html,body').animate({
-            scrollTop: 0,
-        }, 500);
+        $('html,body').animate({ scrollTop: 0 }, 500);
         return false;
     });
 
@@ -29,7 +40,7 @@ $(function() {
             boxHeight = $(this).height(),
             scaledHeight = (boxHeight < 180) ? 200 : boxHeight,
             scaledWidth = boxWidth;
-        (boxWidth > boxHeight) ? $(this).parent().width(parseInt(boxWidth * 180 / scaledHeight)): $(this).parent().width(parseInt(180 / scaledHeight * boxWidth));
+        (boxWidth > boxHeight) ? $(this).parent().width(parseInt(boxWidth * 180 / scaledHeight)) : $(this).parent().width(parseInt(180 / scaledHeight * boxWidth));
 
     });
 
@@ -51,7 +62,7 @@ $(function() {
         if (spamChk == '7') {
             $.ajax({
                 type: "POST",
-                url: "../contact.php",
+                url: "contact.php",
                 //process to mail
                 data: $('form.contact-form').serialize(),
                 success: function(msg) {
@@ -64,75 +75,62 @@ $(function() {
                     //hide popup  
                 },
                 error: function() {
-                    $("#thanks").html("Your message isn't deliverd!");
+                    $("#thanks").html("Your message isn't delivered!");
                 }
             });
         }
     });
 
-});
-//Scrolling function 
-$(window).scroll(function() {
-
-    if ($(window).scrollTop() > 150) {
-        $('#scroll-top').show();
-    } else {
-        $('#scroll-top').hide();
-        $('#navbar-menu li:first').addClass('active');
+    // Animate the skill progress bars once when they scroll into view
+    function animateSkillBars() {
+        var viewBottom = $(window).scrollTop() + $(window).height();
+        $('.skill-items .progress-bar').each(function() {
+            var $bar = $(this);
+            if ($bar.data('animated')) return;
+            if (viewBottom > $bar.offset().top + 40) {
+                var width = parseInt($bar.data('width'), 10) || 0;
+                $bar.animate({ width: width + '%' }, 1200).data('animated', true);
+            }
+        });
     }
 
-    var scrollPos = $(window).scrollTop();
-    $('.navbar-nav>li>a').each(function() {
-        var currLink = $(this.hash);
-        var $target = parseInt($(currLink).offset().top);
-        console.log(currLink);
-        if (scrollPos >= $target) {
-            $('.navbar-nav>li').removeClass("active");
-            currLink.parent().addClass("active");
+    // Scroll behaviour: shrink header, highlight the section in the nav, show scroll-to-top
+    $(window).on('scroll', function() {
+        var scrollPos = $(window).scrollTop();
+
+        animateSkillBars();
+
+        // 1. Shrink the header when scrolled down, restore it at the top
+        var shrink = scrollPos > 60;
+        if ($('#header').hasClass('header-shrink') !== shrink) {
+            $('#header').toggleClass('header-shrink', shrink);
+            syncHeaderOffset();
+        }
+
+        // 2. Scrollspy - highlight the nav item matching the section in view
+        if (scrollPos < 10) {
+            $('#navbar-menu li').removeClass('active');
+            $('#navbar-menu li:first').addClass('active');
         } else {
-            currLink.parent().removeClass("active");
+            var spyOffset = 100;
+            $('.navbar-nav>li>a').each(function() {
+                var $section = $(this.hash);
+                if ($section.length && (scrollPos + spyOffset) >= $section.offset().top) {
+                    $('.navbar-nav>li').removeClass('active');
+                    $(this).parent().addClass('active');
+                }
+            });
+        }
+
+        // 3. Scroll-to-top button visibility
+        if (scrollPos > 150) {
+            $('#scroll-top').show();
+        } else {
+            $('#scroll-top').hide();
         }
     });
+
+    // Kick off the progress bars on first paint (in case the section is already visible)
+    animateSkillBars();
+
 });
-
-var googleMap = document.getElementById("map_canvas");
-var myCenter = new google.maps.LatLng(17.504245, 78.389667);
-//map Longitude and Latitude   
-//Google Maps initialization
-function initialize() {
-
-    //Map Options    
-    var mapProp = {
-        center: myCenter,
-        zoom: 12,
-        disableDefaultUI: false
-    };
-    map = new google.maps.Map(googleMap, mapProp);
-
-    var contentString = '<div class="well" style="background-color:transparent;border:0;"><div id="info-div"><h4><strong>Graphicguru India</strong></h4>' + '<h5 class="text-book"><i class="fa fa-map-marker">&nbsp; </i>Hyderabad, INDIA </h5></div>' + '<ul class="social list-inline"><li class="email" data-toggle="tooltip" data-placement="top" title="Send us your request"><a href="#contactForm" data-toggle="modal"><i class="fa fa-envelope"></i></a></li><li class="twitter"><a href="https://twitter.com/dvinodeluru" target="_blank"><i class="fa fa-twitter"></i></a></li><li class="google-plus"><a href="https://plus.google.com/116799622992799001973/about" target="_blank"><i class="fa fa-google-plus"></i></a></li><li class="linkedin"><a href="http://in.linkedin.com/in/dvinodeluru" target="_blank"><i class="fa fa-linkedin"></i></a></li></ul></div>';
-
-    var infowindow = new google.maps.InfoWindow({
-        content: contentString,
-        disableAutoPan: false,
-        pixelOffset: new google.maps.Size(0, 0)
-
-    });
-    var marker = new google.maps.Marker({
-        position: myCenter,
-        map: map
-
-    });
-    google.maps.event.addListener(map, 'tilesloaded', function() {
-
-        // map.panTo(marker.getPosition());
-        // infowindow.setContent(contentString);
-        // map.setCenter(myCenter);
-        infowindow.open(map, marker);
-
-    });
-    google.maps.event.addListener(infowindow, 'domready', function() {
-        $(".gm-style-iw").next("div").hide();
-    });
-
-}
-google.maps.event.addDomListener(window, 'load', initialize);

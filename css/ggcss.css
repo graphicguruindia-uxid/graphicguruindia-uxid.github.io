@@ -136,8 +136,8 @@ img {
 }
 
 .default-padding {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 110px;
+    padding-bottom: 110px;
 }
 
 .achivement h2 {
@@ -1880,16 +1880,22 @@ address {
     margin: 0;
 }
 
-.services-list-items.services-default-carousel .item .top i {
-    display: inline-block;
-    font-size: 60px;
+.services-list-items.services-default-carousel .item .top .icon {
+    position: relative;
     margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.services-list-items.services-default-carousel .item .top .icon svg {
+    display: block;
+    width: 52px;
+    height: 52px;
     color: #0554f2;
     position: relative;
     z-index: 1;
 }
 
-.services-list-items.services-default-carousel .item .top i::after {
+.services-list-items.services-default-carousel .item .top .icon::after {
     position: absolute;
     left: -10px;
     top: -10px;
@@ -1903,11 +1909,24 @@ address {
 }
 
 .services-list-items.services-default-carousel .item {
-    padding: 60px 45px;
+    padding: 45px 40px 40px;
     background: #ffffff;
     box-shadow: 1px 4px 20px -2px rgb(0 0 0 / 10%);
     flex-grow: 1;
     flex-basis: 0;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.35s ease-in-out;
+}
+
+.services-list-items.services-default-carousel .item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 35px -8px rgb(70 40 186 / 25%);
+}
+
+.services-list-items.services-default-carousel .item p {
+    flex-grow: 1;
+    line-height: 28px;
 }
 
 .services-list-items.services-default-carousel .item ul {
@@ -1998,7 +2017,8 @@ address {
     color: #0554f2;
 }
 
-.services-list-items.services-default-carousel .item>a i {
+.services-list-items.services-default-carousel .item>a i,
+.services-list-items.services-default-carousel .item>a svg.icon {
     display: inline-block;
     height: 50px;
     width: 50px;
@@ -2009,9 +2029,13 @@ address {
     font-size: 11px;
     margin-right: 5px;
     transition: all 0.35s ease-in-out;
+    vertical-align: middle;
+    box-sizing: border-box;
+    padding: 15px;
 }
 
-.services-list-items.services-default-carousel .item>a:hover i {
+.services-list-items.services-default-carousel .item>a:hover i,
+.services-list-items.services-default-carousel .item>a:hover svg.icon {
     transform: rotate(45deg);
 }
 
@@ -2440,5 +2464,261 @@ footer .f-item.link li a:hover {
     100% {
         -webkit-transform: translate(0px, 0px);
         transform: translate(0px, 0px);
+    }
+}
+/* =============================================================
+   SVG icon helpers & shrinking header
+   ============================================================= */
+
+/* Base inline-icon sizing */
+svg.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.125em;
+}
+
+/* Mobile menu toggle button (Bootstrap 5 collapse) */
+.navbar-toggle {
+    float: right;
+    margin: 16px 10px 0 0;
+    padding: 8px 10px;
+    font-size: 20px;
+    line-height: 1;
+    color: #333;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+.navbar-toggle:hover {
+    background: #f5f5f5;
+}
+
+@media (min-width: 768px) {
+    .navbar-toggle {
+        display: none;
+    }
+}
+
+/* Video play button icon */
+.video-play-button.relative svg.icon {
+    width: 26px;
+    height: 26px;
+    color: #f35a38;
+    vertical-align: middle;
+}
+
+/* Footer social icons */
+.social li a svg {
+    display: block;
+    margin: 0 auto;
+}
+
+/* About list checkmarks (previously Font Awesome 5 Pro glyph) */
+.about-style ul li::after {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='%234628ba'><path d='M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z'/></svg>") no-repeat center / contain;
+}
+
+/* =============================================================
+   Shrinking header on scroll
+   ============================================================= */
+.header {
+    transition: padding 0.35s ease, box-shadow 0.35s ease;
+}
+
+.header .navbar-brand img.logo {
+    transition: height 0.35s ease;
+}
+
+.header.header-shrink {
+    padding: 0;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+    .header .navbar-brand img.logo {
+        height: 70px;
+        width: auto;
+    }
+    .header.header-shrink .navbar-brand {
+        height: 56px;
+    }
+    .header.header-shrink .navbar-brand img.logo {
+        height: 42px;
+    }
+    .header.header-shrink .navbar-nav {
+        margin-top: 4px;
+    }
+}
+
+@media (max-width: 767px) {
+    .header .navbar-brand img.logo {
+        height: 60px;
+        width: auto;
+    }
+    .header.header-shrink .navbar-brand {
+        height: 50px;
+    }
+    .header.header-shrink .navbar-brand img.logo {
+        height: 38px;
+    }
+}
+/* =============================================================
+   Section headings (shared by Services & Team)
+   ============================================================= */
+.heading-center h5 {
+    color: #f35a38;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.heading-center h2 {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: #0e2258;
+}
+
+.heading-center p {
+    font-size: 16px;
+    line-height: 30px;
+    color: #666666;
+    margin-bottom: 15px;
+}
+
+/* =============================================================
+   Team section
+   ============================================================= */
+.team-list-area .heading-center {
+    margin-bottom: 60px;
+}
+
+.team-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.team-items .item {
+    text-align: center;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 35px 25px 30px;
+    box-shadow: 1px 4px 20px -2px rgb(0 0 0 / 10%);
+    transition: all 0.35s ease-in-out;
+}
+
+.team-items .item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 35px -8px rgb(70 40 186 / 25%);
+}
+
+.team-items .thumb {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 25px;
+}
+
+.team-items .avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4628ba, #0871ff);
+    color: #ffffff;
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px -10px rgb(70 40 186 / 60%);
+}
+
+.team-items .thumb .social {
+    position: absolute;
+    left: 50%;
+    bottom: -12px;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all 0.35s ease-in-out;
+}
+
+.team-items .item:hover .thumb .social {
+    opacity: 1;
+    bottom: -8px;
+}
+
+/* Show social icons by default on touch devices (no hover) */
+@media (hover: none) {
+    .team-items .thumb .social {
+        opacity: 1;
+        bottom: -8px;
+    }
+}
+
+.team-items .thumb .social li {
+    display: inline-block;
+    margin: 0 4px;
+    background: transparent;
+    width: auto;
+    line-height: 1;
+}
+
+.team-items .thumb .social li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #4628ba;
+    color: #ffffff;
+    transition: all 0.35s ease-in-out;
+}
+
+.team-items .thumb .social li a:hover {
+    background: #f35a38;
+    transform: translateY(-3px);
+}
+
+.team-items .thumb .social svg.icon {
+    width: 15px;
+    height: 15px;
+}
+
+.team-items .info h4 {
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #0e2258;
+}
+
+.team-items .info span {
+    color: #f35a38;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 991px) {
+    .team-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .heading-center h2 {
+        font-size: 34px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .team-items {
+        grid-template-columns: 1fr;
     }
 }

@@ -22,7 +22,6 @@
     <link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png" />
     <link rel="apple-touch-icon" sizes="152x152" href="images/apple-touch-icon-152x152.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon-180x180.png" />
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" media="screen" />
     <link rel="stylesheet" href="css/ggcss.css" media="screen" />
 </head>
@@ -35,8 +34,8 @@
             <div class="container">
                 <!-- Start Header Navigation -->
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                        <i class="fa fa-bars"></i>
+                    <button type="button" class="navbar-toggle" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-expanded="false" aria-controls="navbar-menu">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
                     </button>
                     <a class="navbar-brand" href="index.html">
                         <img src="images/gglogo.png" class="logo" alt="Logo">
@@ -58,6 +57,10 @@
                             <a href="#services" class="">Services</a>
                         </li>
 
+                        <li>
+                            <a href="#team" class="">Team</a>
+                        </li>
+
                         <li><a href="#footer">Contact</a></li>
                     </ul>
                 </div>
@@ -70,7 +73,7 @@
 
     <!-- Start Banner 
     ============================================= -->
-    <section id="home" class="banner-area banner-style-business text-light auto-height bg-cover" style="background: url(images/pngtree-digital-technology-image_19822605.webp);">
+    <section id="home" class="banner-area banner-style-business text-light auto-height bg-cover" style="background: url(images/mission.webp);">
         <div class="item">
             <div class="box-table">
                 <div class="box-cell">
@@ -98,7 +101,7 @@
     <div id="about" class="our-story-area overflow-hidden text-light">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-3 col-md-6 og-item bg-cover" style="background-image: url(images/pngtree-digital-future-image_19775763.webp);">
+                <div class="col-lg-3 col-md-6 og-item bg-cover" style="background-image: url(images/vision.webp);">
                 </div>
                 <div class="col-lg-3 col-md-6 og-item">
                     <div class="content">
@@ -146,9 +149,7 @@
                 <div class="col-lg-6 achivement">
                     <h2>Secure & Safe Advices for your Small & Big Businesses</h2>
                     <div class="video-content" style="background-image: url(images/Future-Technology.jpg);">
-                        <a href="https://www.youtube.com/" class="video-play-button relative item-center">
-                            <i class="fa fa-play"></i>
-                        </a>
+                        
                     </div>
                     <div class="skill-items">
                         <!-- Progress Bar Start -->
@@ -177,8 +178,8 @@
     <!-- End About -->
     <!-- Start Fun Factor 
     ============================================= -->
-    <div class="quick-contact-area shadow theme-hard bg-fixed text-light default-padding" style="background-image: url(images/shutterstock_1326553091-1024x454.jpg);">
-        <div class="container">
+    <div class="quick-contact-area shadow theme-hard bg-fixed text-light default-padding" style="background-image: url(images/shutterstock_1326553091-1024x454.jpg);">        
+<div class="container">
             <div class="row align-center">
                 <div class="col-lg-6 left-info">
                     <h2>We run all Kinds of IT Services <br>that vow your Success</h2>
@@ -207,7 +208,7 @@
                     </ul>
                 </div>
                 <div class="col-lg-5 offset-lg-1 text-right center-block">
-                    <a class="btn circle btn-light border btn-md" href="mailto:ggindia@graphicguru.in">Lets Talk <i class="fas fa-comments"></i></a>
+                    <a class="btn circle btn-light border btn-md" href="mailto:ggindia@graphicguru.in">Lets Talk <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M416 176C416 78.8 322.9 0 208 0S0 78.8 0 176c0 39.57 15.62 75.96 41.67 105.4c-16.39 32.76-39.23 57.32-39.59 57.68c-2.1 2.205-2.67 5.475-1.441 8.354C1.9 350.3 4.602 352 7.66 352c38.35 0 70.76-11.12 95.74-24.04C134.2 343.1 169.8 352 208 352C322.9 352 416 273.2 416 176zM599.6 443.7C624.8 413.9 640 376.6 640 336C640 238.8 554 160 448 160c-.3145 0-.6191 .041-.9336 .043C447.5 165.3 448 170.6 448 176c0 98.62-79.68 181.2-186.1 202.5C282.7 455.1 357.1 512 448 512c33.69 0 65.32-8.008 92.85-21.98C565.2 502 596.1 512 632.3 512c3.059 0 5.76-1.725 7.02-4.605c1.229-2.879 .6582-6.148-1.441-8.354C637.6 498.7 615.9 475.3 599.6 443.7z"/></svg></a>
                 </div>
             </div>
         </div>
@@ -232,51 +233,49 @@
                 <!-- Single Item -->
                 <div class="item">
                     <div class="top">
-                        <i class="flaticon-secure"></i>
+                        <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M256-.0078C260.7-.0081 265.2 1.008 269.4 2.913L457.7 82.79C479.7 92.12 496.2 113.8 496 139.1C495.5 239.2 454.7 420.7 282.4 503.2C265.7 511.1 246.3 511.1 229.6 503.2C57.25 420.7 16.49 239.2 15.1 139.1C15.87 113.8 32.32 92.12 54.3 82.79L242.7 2.913C246.8 1.008 251.4-.0081 256-.0078V-.0078zM256 444.8C393.1 378 431.1 230.1 432 141.4L256 66.77L256 444.8z"/></svg></span>
                         <h4>Data Security</h4>
                     </div>
                     <p>
-                        Today a small business without having the full-fledged capability to accommodate big data servers can utilize big data analytics through ready to use apps. Software as a Service (SaaS) model has made business through ready to use algorithms and AI-based
-                        products in-house operations
+                        We help small and mid-sized businesses unlock the power of big data without heavy in-house infrastructure. Through Software as a Service (SaaS) models and AI-driven tools, we keep your data secure while turning it into ready-to-use, actionable insights.
                     </p>
-                    <a href="#footer"><i class="fas fa-plus"></i> Discover Now</a>
+                    <a href="#footer"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"/></svg> Discover Now</a>
                 </div>
                 <!-- End Single Item -->
                 <!-- Single Item -->
                 <div class="item">
                     <div class="top">
-                        <i class="flaticon-technical-support"></i>
+                        <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M191.1 224c0-17.72-14.34-32.04-32-32.04L144 192c-35.34 0-64 28.66-64 64.08v47.79C80 339.3 108.7 368 144 368H160c17.66 0 32-14.36 32-32.06L191.1 224zM256 0C112.9 0 4.583 119.1 .0208 256L0 296C0 309.3 10.75 320 23.1 320S48 309.3 48 296V256c0-114.7 93.34-207.8 208-207.8C370.7 48.2 464 141.3 464 256v144c0 22.09-17.91 40-40 40h-110.7C305 425.7 289.7 416 272 416H241.8c-23.21 0-44.5 15.69-48.87 38.49C187 485.2 210.4 512 239.1 512H272c17.72 0 33.03-9.711 41.34-24H424c48.6 0 88-39.4 88-88V256C507.4 119.1 399.1 0 256 0zM368 368c35.34 0 64-28.7 64-64.13V256.1C432 220.7 403.3 192 368 192l-16 0c-17.66 0-32 14.34-32 32.04L320 335.9C320 353.7 334.3 368 352 368H368z"/></svg></span>
                         <h4>IT Management</h4>
                     </div>
                     <p>
-                        Services provided are ongoing, “maintenance” driven in the form of administrative tasks, regulatory compliance and reporting, as well as other specialised services like software development, change management, network planning and tech support
+                        Ongoing, maintenance-driven services covering administrative tasks, regulatory compliance, and reporting — plus specialised support including software development, change management, network planning, and responsive technical support.
                     </p>
-                    <a href="#footer"><i class="fas fa-plus"></i> Discover Now</a>
+                    <a href="#footer"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"/></svg> Discover Now</a>
                 </div>
                 <!-- End Single Item -->
                 <!-- Single Item -->
                 <div class="item">
                     <div class="top">
-                        <i class="flaticon-laboratory"></i>
+                        <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M437.2 403.5L319.1 215L319.1 64h7.1c13.25 0 23.1-10.75 23.1-24l-.0002-16c0-13.25-10.75-24-23.1-24H120C106.8 0 96.01 10.75 96.01 24l-.0002 16c0 13.25 10.75 24 23.1 24h7.1L128 215l-117.2 188.5C-18.48 450.6 15.27 512 70.89 512h306.2C432.7 512 466.5 450.5 437.2 403.5zM137.1 320l48.15-77.63C189.8 237.3 191.9 230.8 191.9 224l.0651-160h63.99l-.06 160c0 6.875 2.25 13.25 5.875 18.38L309.9 320H137.1z"/></svg></span>
                         <h4>Analytic Solutions</h4>
                     </div>
                     <p>
-                        Coordinate business and legal stakeholders as the technical implementation teams to assemble Busine requirements towards project delivery with Team of experts and shape the future of SaaS, PaaS platforms.
+                        We bring business and legal stakeholders together with expert technical teams to deliver projects on time. With a data-driven approach, we help shape the future of SaaS and PaaS platforms for measurable growth.
                     </p>
-                    <a href="#footer"><i class="fas fa-plus"></i> Discover Now</a>
+                    <a href="#footer"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"/></svg> Discover Now</a>
                 </div>
                 <!-- End Single Item -->
                 <!-- Single Item -->
                 <div class="item">
                     <div class="top">
-                        <i class="flaticon-seo"></i>
+                        <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M416 208C416 253.9 401.1 296.3 375.1 330.7L502.6 457.4C515.1 469.9 515.1 490.1 502.6 502.6C490.1 515.1 469.9 515.1 457.4 502.6L330.7 375.1C296.3 401.1 253.9 416 208 416C93.12 416 0 322.9 0 208C0 93.12 93.12 0 208 0C322.9 0 416 93.12 416 208zM104 280C104 293.3 114.7 304 128 304C141.3 304 152 293.3 152 280V216C152 202.7 141.3 192 128 192C114.7 192 104 202.7 104 216V280zM184 280C184 293.3 194.7 304 208 304C221.3 304 232 293.3 232 280V120C232 106.7 221.3 96 208 96C194.7 96 184 106.7 184 120V280zM264 280C264 293.3 274.7 304 288 304C301.3 304 312 293.3 312 280V184C312 170.7 301.3 160 288 160C274.7 160 264 170.7 264 184V280z"/></svg></span>
                         <h4>Design Thinking</h4>
                     </div>
                     <p>
-                        The Future of Customer Experience (CX) is ever-changing consumer and behaviours, with help of technology and UX can enable better experiences to meet the CX expectations of increasing demand. ideating, prototyping, testing the application, and putting
-                        it through multiple iterations to visualize our clients and benefit from this approach to problem-solving.
+                        Customer experience is constantly evolving. Through research, ideation, prototyping, and iterative testing, we design intuitive products that meet rising CX expectations and turn user needs into lasting business value.
                     </p>
-                    <a href="#footer"><i class="fas fa-plus"></i> Discover Now</a>
+                    <a href="#footer"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"/></svg> Discover Now</a>
                 </div>
                 <!-- End Single Item -->
 
@@ -284,6 +283,114 @@
         </div>
     </div>
     <!-- End Services -->
+    <!-- Start Team
+    ============================================= -->
+    <div id="team" class="team-list-area it-team carousel-shadow overflow-hidden default-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="heading-center text-center">
+                        <h5>Our People</h5>
+                        <h2>Meet the Team</h2>
+                        <p>Our team thrives on collaboration, working closely with stakeholders, developers, and leadership to modernize platforms, enhance customer journeys, and bring strategic initiatives to life. Whether it’s crafting sleek UI designs, developing front-end features, or producing compelling graphic collaterals, we deliver with agility, clarity, and purpose.</p>
+                        <p>We specialize in digital transformation through design and delivery — from conducting user research and prototyping to building scalable propositions and piloting new capabilities. By combining creativity with technical precision, we ensure every interaction is both visually engaging and functionally impactful.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="display:none;">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="team-items">
+
+                        <!-- Single Item -->
+                        <div class="item">
+                            <div class="thumb">
+                                <div class="avatar" aria-hidden="true">AM</div>
+                                <div class="social">
+                                    <ul>                                        
+                                        <li class="linkedin">
+                                            <a href="#"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h4>Arjun Mehta</h4>
+                                <span>UI / UX Designer</span>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+
+                        <!-- Single Item -->
+                        <div class="item">
+                            <div class="thumb">
+                                <div class="avatar" aria-hidden="true">SR</div>
+                                <div class="social">
+                                    <ul>                                        
+                                        <li class="linkedin">
+                                            <a href="#"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h4>Sneha Reddy</h4>
+                                <span>Front-end Developer</span>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+
+                        <!-- Single Item -->
+                        <div class="item">
+                            <div class="thumb">
+                                <div class="avatar" aria-hidden="true">RV</div>
+                                <div class="social">
+                                    <ul>                                        
+                                        <li class="linkedin">
+                                            <a href="#"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h4>Rahul Verma</h4>
+                                <span>Graphic Designer</span>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+
+                        <!-- Single Item -->
+                        <div class="item">
+                            <div class="thumb">
+                                <div class="avatar" aria-hidden="true">KI</div>
+                                <div class="social">
+                                    <ul>
+                                        <li class="facebook">
+                                            <a href="#"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg></a>
+                                        </li>
+                                        <li class="twitter">
+                                            <a href="#"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
+                                        </li>
+                                        <li class="linkedin">
+                                            <a href="#"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h4>Kavya Iyer</h4>
+                                <span>Project Manager</span>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Team -->
     <!-- Star Footer
     ============================================= -->
     <footer id="footer" class="footer bg-dark text-light" data-type="page" data-name="footer">
@@ -297,19 +404,19 @@
                                 We are driven by a mission to transform complex ideas into seamless digital experiences. Our focus lies in delivering intuitive user interfaces, human-centered design, and innovative solutions that bridge the gap between technology and people.
 
                             </p><p>We believe design is more than aesthetics — it’s the foundation of meaningful digital innovation.</p>
-                            <div class="social">
+                            <div class="social" style="display:none;">
                                 <ul>
                                     <li class="facebook">
-                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg></a>
                                     </li>
                                     <li class="twitter">
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
                                     </li>
                                     <li class="youtube">
-                                        <a href="#"><i class="fab fa-youtube"></i></a>
+                                        <a href="#"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg></a>
                                     </li>
                                     <li class="instagram">
-                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                        <a href="#"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
                                     </li>
                                 </ul>
                             </div>
@@ -393,7 +500,7 @@
     </footer>
     <!-- End Footer-->
     <!--Scroll to Top Section Starts-->
-    <a id="scroll-top" href="javascript:void(0)"><i class="fa-solid fa-angle-up"></i></a>
+    <a id="scroll-top" href="javascript:void(0)"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M352 352c-8.188 0-16.38-3.125-22.62-9.375L192 205.3l-137.4 137.4c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25C368.4 348.9 360.2 352 352 352z"/></svg></a>
     <!--Scroll to Top Section Ends-->
 
     <!--Scripts Section Starts-->
@@ -401,7 +508,6 @@
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js" defer></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.1.0/progressbar.min.js" defer></script>
-    <script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=false" defer></script>
     <script type="text/javascript" src="js/ggscripts.js" defer></script>
 
     <!-- Default Statcounter code for Graphicguru India
