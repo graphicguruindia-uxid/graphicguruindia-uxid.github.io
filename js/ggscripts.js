@@ -16,14 +16,14 @@ $(function() {
         if ($target.length) {
             var scrollTo = $target.offset().top - 80;
             $('html,body').animate({ scrollTop: scrollTo }, 500);
-        }
-        e.preventDefault();
+            e.preventDefault();
 
-        // Close the mobile menu after tapping a nav link (Bootstrap 5)
-        if ($(window).width() < 768 && window.bootstrap && window.bootstrap.Collapse) {
-            var menuEl = document.getElementById('navbar-menu');
-            if (menuEl && menuEl.classList.contains('show')) {
-                window.bootstrap.Collapse.getOrCreateInstance(menuEl).hide();
+            // Close the mobile menu after tapping a nav link (Bootstrap 5)
+            if ($(window).width() < 768 && window.bootstrap && window.bootstrap.Collapse) {
+                var menuEl = document.getElementById('navbar-menu');
+                if (menuEl && menuEl.classList.contains('show')) {
+                    window.bootstrap.Collapse.getOrCreateInstance(menuEl).hide();
+                }
             }
         }
     });

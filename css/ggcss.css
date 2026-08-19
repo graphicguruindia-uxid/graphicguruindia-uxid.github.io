@@ -2722,3 +2722,22 @@ svg.icon {
         grid-template-columns: 1fr;
     }
 }
+
+/* CX pricing packages */
+.services-list-items.services-default-carousel .item .price {
+    font-size: 26px;
+    font-weight: 800;
+    color: #0554f2;
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+.services-list-items.services-default-carousel .item .package-note {
+    color: #0e2258;
+    font-weight: 600;
+}
+
+.services-list-items.services-default-carousel .item .btn {
+    align-self: flex-start;
+    margin-top: 30px;
+}
