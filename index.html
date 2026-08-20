@@ -27,6 +27,9 @@
 </head>
 
 <body class="topMrgn" data-spy="scroll" data-offset="140" data-target=".navbar-nav">
+    <!-- Skip Navigation -->
+    <a href="#main-content" class="visually-hidden-focusable">Skip to main content</a>
+
     <!--Header Section Starts-->
     <header id="header" class="navbar navbar-default navbar-fixed-top header">
         <!-- Start Navigation -->
@@ -34,11 +37,11 @@
             <div class="container">
                 <!-- Start Header Navigation -->
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-expanded="false" aria-controls="navbar-menu">
+                    <button type="button" class="navbar-toggle" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-expanded="false" aria-controls="navbar-menu" aria-label="Toggle navigation">
                         <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
                     </button>
                     <a class="navbar-brand" href="index.html">
-                        <img src="images/gglogo.png" class="logo" alt="Logo">
+                        <img src="images/gglogo.png" class="logo" alt="Graphicguru India Logo" loading="eager">
                     </a>
                 </div>
                 <!-- End Header Navigation -->
@@ -75,6 +78,8 @@
     </header>
     <!--Header Section Ends-->
 
+    <!-- Main Content -->
+    <main id="main-content">
     <!-- Start Banner 
     ============================================= -->
     <section id="home" class="banner-area banner-style-business text-light auto-height bg-cover" style="background: url(images/mission.webp);">
@@ -237,18 +242,6 @@
                 <!-- Single Item -->
                 <div class="item">
                     <div class="top">
-                        <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M256-.0078C260.7-.0081 265.2 1.008 269.4 2.913L457.7 82.79C479.7 92.12 496.2 113.8 496 139.1C495.5 239.2 454.7 420.7 282.4 503.2C265.7 511.1 246.3 511.1 229.6 503.2C57.25 420.7 16.49 239.2 15.1 139.1C15.87 113.8 32.32 92.12 54.3 82.79L242.7 2.913C246.8 1.008 251.4-.0081 256-.0078V-.0078zM256 444.8C393.1 378 431.1 230.1 432 141.4L256 66.77L256 444.8z"/></svg></span>
-                        <h4>Data Security</h4>
-                    </div>
-                    <p>
-                        We help small and mid-sized businesses unlock the power of big data without heavy in-house infrastructure. Through Software as a Service (SaaS) models and AI-driven tools, we keep your data secure while turning it into ready-to-use, actionable insights.
-                    </p>
-                    <a href="#footer"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"/></svg> Discover Now</a>
-                </div>
-                <!-- End Single Item -->
-                <!-- Single Item -->
-                <div class="item">
-                    <div class="top">
                         <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M191.1 224c0-17.72-14.34-32.04-32-32.04L144 192c-35.34 0-64 28.66-64 64.08v47.79C80 339.3 108.7 368 144 368H160c17.66 0 32-14.36 32-32.06L191.1 224zM256 0C112.9 0 4.583 119.1 .0208 256L0 296C0 309.3 10.75 320 23.1 320S48 309.3 48 296V256c0-114.7 93.34-207.8 208-207.8C370.7 48.2 464 141.3 464 256v144c0 22.09-17.91 40-40 40h-110.7C305 425.7 289.7 416 272 416H241.8c-23.21 0-44.5 15.69-48.87 38.49C187 485.2 210.4 512 239.1 512H272c17.72 0 33.03-9.711 41.34-24H424c48.6 0 88-39.4 88-88V256C507.4 119.1 399.1 0 256 0zM368 368c35.34 0 64-28.7 64-64.13V256.1C432 220.7 403.3 192 368 192l-16 0c-17.66 0-32 14.34-32 32.04L320 335.9C320 353.7 334.3 368 352 368H368z"/></svg></span>
                         <h4>IT Management</h4>
                     </div>
@@ -407,6 +400,8 @@
         </div>
     </div>
     <!-- End Team -->
+    </main>
+
     <!-- Star Footer
     ============================================= -->
     <footer id="footer" class="footer bg-dark text-light" data-type="page" data-name="footer">
@@ -447,16 +442,13 @@
                                     <a href="cx-integration.html">CX Stack Integration</a>
                                 </li>
                                 <li>
-                                    <a href="#footer">SEO Service</a>
+                                    <a href="#services">IT Management</a>
                                 </li>
                                 <li>
-                                    <a href="#footer">Customer Support</a>
+                                    <a href="#services">Analytic Solutions</a>
                                 </li>
                                 <li>
-                                    <a href="#footer">Asset Managment</a>
-                                </li>
-                                <li>
-                                    <a href="#footer">Design Thinking</a>
+                                    <a href="#services">Design Thinking</a>
                                 </li>
                             </ul>
                         </div>
@@ -505,10 +497,10 @@
             <div class="footer-bottom">
                 <div class="row">
                     <div class="col-lg-6">
-                        <p>&copy; Copyright <span id="copyright-year">2022</span>. All Rights Reserved</p>
+                        <p>&copy; Copyright <span id="copyright-year"></span>. All Rights Reserved</p>
                     </div>
                     <div class="col-lg-6 logo">
-                        <a href="index.html"><img src="images/gglogo.png" alt="Logo"></a>
+                        <a href="index.html"><img src="images/gglogo.png" alt="Graphicguru India Logo" loading="lazy"></a>
                     </div>
                 </div>
             </div>
@@ -516,7 +508,7 @@
     </footer>
     <!-- End Footer-->
     <!--Scroll to Top Section Starts-->
-    <a id="scroll-top" href="javascript:void(0)"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M352 352c-8.188 0-16.38-3.125-22.62-9.375L192 205.3l-137.4 137.4c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25C368.4 348.9 360.2 352 352 352z"/></svg></a>
+    <a id="scroll-top" href="javascript:void(0)" aria-label="Scroll to top"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M352 352c-8.188 0-16.38-3.125-22.62-9.375L192 205.3l-137.4 137.4c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25C368.4 348.9 360.2 352 352 352z"/></svg></a>
     <!--Scroll to Top Section Ends-->
 
     <!--Scripts Section Starts-->
@@ -525,6 +517,9 @@
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js" defer></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.1.0/progressbar.min.js" defer></script>
     <script type="text/javascript" src="js/ggscripts.js" defer></script>
+    <script type="text/javascript">
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    </script>
 
     <!-- Default Statcounter code for Graphicguru India
 http://graphicguru.in -->
