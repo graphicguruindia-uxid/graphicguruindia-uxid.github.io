@@ -2180,26 +2180,12 @@ address {
     font-weight: 500;
     text-decoration: none;
     transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.footer .f-item.link li a::before {
-    content: '';
-    width: 0;
-    height: 2px;
-    background: linear-gradient(90deg, #4628ba, #f90);
-    transition: width 0.3s ease;
+    display: inline-block;
 }
 
 .footer .f-item.link li a:hover {
     color: #fff;
-    padding-left: 4px;
-}
-
-.footer .f-item.link li a:hover::before {
-    width: 100%;
+    padding-left: 6px;
 }
 
 .footer .f-item.contact .address ul {
