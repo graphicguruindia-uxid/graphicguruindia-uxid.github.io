@@ -312,6 +312,33 @@ html {
     display: none;
 }
 
+/* Dropdown menus */
+.header .dropdown-menu {
+    background: var(--bg-white);
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    margin: 0;
+    padding: 8px 0;
+    min-width: 220px;
+}
+
+.header .dropdown-menu li a {
+    display: block;
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--text-dark);
+    transition: color 0.2s, background 0.2s;
+}
+
+.header .dropdown-menu li a:hover,
+.header .dropdown-menu li a:focus {
+    background: #f5f5f5;
+    color: var(--accent);
+}
+
 .navbar-fixed-top {
     position: fixed;
     top: 0;
@@ -3602,6 +3629,29 @@ svg.icon {
 }
 
 @media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    @keyframes zoom {
+        from, to { transform: none; }
+    }
+    @keyframes rotate-animation {
+        from, to { transform: none; }
+    }
+    @keyframes moving {
+        from, to { transform: none; }
+    }
+    @keyframes bounce {
+        from, to { transform: translateX(-50%) translateY(0); }
+    }
     .gg-hero-glow-one,
     .gg-hero-glow-two,
     .gg-hero-scroll-mouse::before {
@@ -3617,6 +3667,27 @@ svg.icon {
     .gg-team-card,
     .gg-work-card,
     .gg-process-step::after {
+        transition: none;
+    }
+    .gg-service-card:hover {
+        transform: none;
+    }
+    .gg-team-card:hover {
+        transform: none;
+    }
+    .gg-work-card:hover {
+        transform: none;
+    }
+    .gg-service-link:hover svg {
+        transform: none;
+    }
+    #scroll-top {
+        transition: none;
+    }
+    .header {
+        transition: none;
+    }
+    .header .navbar-brand img.logo {
         transition: none;
     }
 }

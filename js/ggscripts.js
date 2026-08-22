@@ -1,6 +1,8 @@
 $(function() {
     'use strict';
 
+    var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     // Keep the body offset in sync with the fixed header height
     function syncHeaderOffset() {
         $('body').css('padding-top', $('#header').outerHeight() + 4);
@@ -15,7 +17,11 @@ $(function() {
         var $target = $(this.hash);
         if ($target.length) {
             var scrollTo = $target.offset().top - 80;
-            $('html,body').animate({ scrollTop: scrollTo }, 500);
+            if (prefersReducedMotion) {
+                $('html,body').scrollTop(scrollTo);
+            } else {
+                $('html,body').animate({ scrollTop: scrollTo }, 500);
+            }
             e.preventDefault();
 
             // Close the mobile menu after tapping a nav link (Bootstrap 5)
@@ -30,7 +36,11 @@ $(function() {
 
     // Scroll to top button
     $('#scroll-top').click(function() {
-        $('html,body').animate({ scrollTop: 0 }, 500);
+        if (prefersReducedMotion) {
+            $('html,body').scrollTop(0);
+        } else {
+            $('html,body').animate({ scrollTop: 0 }, 500);
+        }
         return false;
     });
 
@@ -89,7 +99,11 @@ $(function() {
             if ($bar.data('animated')) return;
             if (viewBottom > $bar.offset().top + 40) {
                 var width = parseInt($bar.data('width'), 10) || 0;
-                $bar.animate({ width: width + '%' }, 1200).data('animated', true);
+                if (prefersReducedMotion) {
+                    $bar.css('width', width + '%').data('animated', true);
+                } else {
+                    $bar.animate({ width: width + '%' }, 1200).data('animated', true);
+                }
             }
         });
     }
