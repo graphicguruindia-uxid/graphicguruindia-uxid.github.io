@@ -3,8 +3,8 @@
 
 <head>
     <!--Site github from www graphicguru index.html -->
-    <meta http-equiv="Content-Type" content="text/html;" charset=" utf-8">
-    <title>Graphicguru:: Portfolio - Dangudubiyyapu Vinod </title>
+    <meta charset="UTF-8">
+    <title>Digital Experiences That Move Business Forward | Graphicguru India Hyderabad</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="msvalidate.01" content="E13D08CA65FDE24B60EA9A43CE917633" />
@@ -55,7 +55,7 @@
                         <li>
                             <a href="#work" class="">Work</a>
                         </li>
-                        <li><a href="#footer">Contact</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -83,13 +83,13 @@
                                 We design digital experiences that <span>move business forward</span>
                             </h1>
                             <p class="gg-hero-lead">
-                                Graphicguru India is a customer-driven studio blending UX design, front-end engineering
+                                Graphicguru India designs digital experiences that move business forward &mdash; a customer-driven studio blending UX design, front-end engineering
                                 and intelligent automation &mdash; delivering corporate-grade portfolios, platforms and
                                 CX workflows that meet goals and satisfy consumers.
                             </p>
                             <div class="gg-hero-buttons">
                                 <a class="btn circle btn-theme effect btn-md" href="#work">View Our Work</a>
-                                <a class="btn circle btn-light border btn-md" href="#footer">Start a Project</a>
+                                <a class="btn circle btn-light border btn-md" href="contact.html">Start a Project</a>
                             </div>
                             <ul class="gg-hero-chips" aria-label="Highlights">
                                 <li>UX / UI Design</li>
@@ -156,7 +156,7 @@
                                 <li>Promote services with consistent branding</li>
                                 <li>Automate customer journeys with AI-powered CX</li>
                             </ul>
-                            <a class="btn circle btn-theme effect btn-md" href="#footer">Know More</a>
+                            <a class="btn circle btn-theme effect btn-md" href="contact.html">Know More</a>
                         </div>
                     </div>
                 </div>
@@ -373,7 +373,7 @@
                             <p class="gg-cta-text">From personal portfolios to corporate platforms &mdash; we run all kinds of IT services that vow your success.</p>
                         </div>
                         <div class="col-lg-4 text-lg-end">
-                            <a class="btn circle btn-light border btn-md" href="mailto:ggindia@graphicguru.in">Let&rsquo;s Talk</a>
+                            <a class="btn circle btn-light border btn-md" href="contact.html">Let&rsquo;s Talk</a>
                         </div>
                     </div>
                 </div>
@@ -389,7 +389,7 @@
         <div class="container">
             <div class="f-items default-padding">
                 <div class="row">
-<div class="col-lg-5 col-md-6 item">
+<div class="col-lg-8 col-md-6 item">
                         <div class="f-item about">
                             <h4 class="widget-title">About Us</h4>
                             <p>
@@ -429,29 +429,10 @@
                                 <li>
                                     <a href="#tnc">Terms</a>
                                 </li>
+                                <li>
+                                    <a href="contact.html">Contact Us</a>
+                                </li>
                             </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 item">
-                        <div class="f-item contact">
-                            <h4 class="widget-title">Contact Us</h4>
-                            <div class="address">
-                                <ul>
-                                    <li>
-                                        <p>Address</p>
-                                        <strong>Hyderabad, IN 500081</strong>
-                                    </li>
-                                    <li>
-                                        <p>Email</p>
-                                        <strong><a href="mailto:ggindia@graphicguru.in">ggindia@graphicguru.in</a></strong>
-                                    </li>
-                                    <li>
-                                        <p>Contact</p>
-                                        <strong alt="+919849180563" name="+919849180563">+91-X84XX-805XX</strong>
-                                    </li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -481,63 +462,7 @@
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js" defer></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.1.0/progressbar.min.js" defer></script>
     <script type="text/javascript" src="js/ggscripts.js" defer></script>
-    <script type="text/javascript">
-        document.getElementById('copyright-year').textContent = new Date().getFullYear();
-
-        // DSR-9: animate stat counters when they scroll into view
-        (function () {
-            'use strict';
-            var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-            function runCounter(el) {
-                var target = parseInt(el.getAttribute('data-gg-count'), 10) || 0;
-                if (reduceMotion || !('IntersectionObserver' in window)) {
-                    el.textContent = target;
-                    return;
-                }
-                var duration = 1600;
-                var start = null;
-                function step(ts) {
-                    if (!start) start = ts;
-                    var progress = Math.min((ts - start) / duration, 1);
-                    var eased = 1 - Math.pow(1 - progress, 3);
-                    el.textContent = Math.round(eased * target);
-                    if (progress < 1) {
-                        window.requestAnimationFrame(step);
-                    }
-                }
-                window.requestAnimationFrame(step);
-            }
-
-            if ('IntersectionObserver' in window) {
-                var seen = new WeakSet();
-                var counterObserver = new IntersectionObserver(function (entries) {
-                    entries.forEach(function (entry) {
-                        if (entry.isIntersecting && !seen.has(entry.target)) {
-                            seen.add(entry.target);
-                            runCounter(entry.target);
-                            counterObserver.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.4 });
-                document.querySelectorAll('.gg-counter').forEach(function (el) { counterObserver.observe(el); });
-
-                // Reveal-on-scroll for .gg-reveal blocks
-                var revealObserver = new IntersectionObserver(function (entries) {
-                    entries.forEach(function (entry) {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('gg-in');
-                            revealObserver.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-                document.querySelectorAll('.gg-reveal').forEach(function (el) { revealObserver.observe(el); });
-            } else {
-                document.querySelectorAll('.gg-counter').forEach(function (el) { el.textContent = el.getAttribute('data-gg-count'); });
-                document.querySelectorAll('.gg-reveal').forEach(function (el) { el.classList.add('gg-in'); });
-            }
-        })();
-    </script>
+    
 
     <!-- Default Statcounter code for Graphicguru India
 http://graphicguru.in -->

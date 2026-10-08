@@ -3005,6 +3005,24 @@ svg.icon {
 
 /* Mobile navigation improvements */
 @media (max-width: 767px) {
+    #header .navbar-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    #header .navbar-header .navbar-brand {
+        flex: 1 1 auto;
+        margin-right: auto;
+    }
+
+    #header .navbar-header .navbar-toggle {
+        margin-left: auto;
+        float: none;
+        order: 2;
+    }
+
     .navbar-nav > li > a {
         padding: 12px 15px;
         min-height: 44px;
@@ -3728,6 +3746,20 @@ svg.icon {
     margin: 0;
 }
 
+/* Consistent rhythm between band sections and the CTA card (service pages).
+   .gg-stats carries 64px bottom / .cx-section 90px bottom while .gg-cta
+   has 0 top padding, leaving an oversized detached gap. Pull the CTA up
+   so the final gap is a uniform 56px on all service pages.
+   Scoped to adjacent siblings, so the homepage (stats NOT followed
+   by CTA) is unaffected. */
+.gg-stats + .gg-cta {
+    margin-top: -8px;
+}
+
+.cx-section + .gg-cta {
+    margin-top: -34px;
+}
+
 /* Reveal on scroll */
 .gg-reveal {
     opacity: 0;
@@ -3810,6 +3842,13 @@ svg.icon {
     }
     .gg-cta .text-lg-end {
         text-align: center !important;
+    }
+    /* Tighter band-to-CTA rhythm on small screens (40px uniform gap) */
+    .gg-stats + .gg-cta {
+        margin-top: -24px;
+    }
+    .cx-section + .gg-cta {
+        margin-top: -50px;
     }
 }
 
