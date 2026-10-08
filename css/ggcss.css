@@ -2122,7 +2122,7 @@ address {
    Footer - Modern Redesign
    ======================================== */
 .footer {
-    background: #0e1a2b;
+    /*background: #0e1a2b;*/
     color: #b8c5d6;
     padding: 80px 0 0;
 }
