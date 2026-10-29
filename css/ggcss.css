@@ -4242,3 +4242,45 @@ svg.icon {
         padding: 24px 22px;
     }
 }
+
+/* GRAA-4 About page */
+
+.gg-about-lead {
+    font-size: 19px;
+    line-height: 1.8;
+    color: var(--bg-dark);
+    font-weight: 600;
+}
+
+.gg-about-close {
+    font-weight: 600;
+    color: var(--bg-dark);
+}
+
+.gg-photo-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    aspect-ratio: 4 / 5;
+    border: 2px dashed #cfc9e8;
+    border-radius: 18px;
+    background: #f6f5fb;
+    color: #8a86a3;
+    text-align: center;
+    padding: 24px;
+}
+
+.gg-photo-placeholder .icon {
+    width: 64px;
+    height: 64px;
+    opacity: 0.35;
+}
+
+.gg-photo-placeholder span {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
