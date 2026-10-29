@@ -99,8 +99,8 @@ var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-moti
                 $("#thanks")[0].scrollIntoView({ behavior: "smooth", block: "center" });
             },
             error: function() {
-                $("#thanks").html('<p class="alert alert-danger">Your message couldn\'t be delivered. Please try again or use the Company → Contact Us link to retry.</p>').show();
-                $btn.prop('disabled', false).text('Send Message');
+                $("#thanks").html('<p class="alert alert-danger">Your message couldn\'t be delivered. Please email <a href="mailto:ggindia@graphicguru.in">ggindia@graphicguru.in</a> or message <a href="https://wa.me/919849180563">WhatsApp</a>.</p>').show();
+                $btn.prop('disabled', false).text('Send message');
             }
         });
         return false;
