@@ -4208,3 +4208,37 @@ svg.icon {
         font-size: 24px;
     }
 }
+
+/* GRAA-3 SharePoint page */
+
+.gg-check-list-single {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    font-size: 16px;
+}
+
+.gg-callout {
+    border-left: 4px solid var(--accent);
+    background: #f6f5fb;
+    border-radius: 0 16px 16px 0;
+    padding: 32px 34px;
+}
+
+.gg-callout-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--bg-dark);
+    margin-bottom: 10px;
+}
+
+.gg-callout p {
+    margin: 0;
+    line-height: 1.8;
+    color: #5d5a72;
+}
+
+@media only screen and (max-width: 767px) {
+    .gg-callout {
+        padding: 24px 22px;
+    }
+}
