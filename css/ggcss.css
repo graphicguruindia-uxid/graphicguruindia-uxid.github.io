@@ -4109,3 +4109,102 @@ svg.icon {
     .cx-section h2 { font-size: 28px; }
 }
 }
+
+/* ============================================================
+   DSR-10 CMS specialist reposition (GRAA-2)
+   Appended: Oct 2026
+   ============================================================ */
+
+.gg-price {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    color: var(--primary);
+    background: rgba(70, 40, 186, 0.08);
+    border-radius: var(--border-radius-pill);
+    padding: 6px 14px;
+    margin-bottom: 14px;
+}
+
+.gg-service-card-accent .gg-price,
+.gg-price-light {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.16);
+}
+
+.gg-note {
+    margin: 26px 0 0;
+    font-size: 14px;
+    color: #5d5a72;
+}
+
+.gg-platforms {
+    background: #f6f5fb;
+}
+
+.gg-platforms-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 48px;
+    margin-top: 26px;
+}
+
+.gg-platform-item {
+    border-top: 1px solid #e2dfef;
+    padding: 22px 0 24px;
+}
+
+.gg-platform-item h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--bg-dark);
+    margin-bottom: 8px;
+}
+
+.gg-platform-item p {
+    font-size: 14.5px;
+    line-height: 1.75;
+    color: #5d5a72;
+    margin: 0;
+}
+
+.gg-persona {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+    border-radius: 18px;
+    padding: 46px 40px;
+    background: linear-gradient(150deg, var(--bg-dark) 0%, #1b1464 60%, var(--primary) 100%);
+    color: #ffffff;
+    box-shadow: 0 30px 60px rgba(14, 34, 88, 0.18);
+}
+
+.gg-persona strong {
+    font-size: 30px;
+    line-height: 1.25;
+    font-weight: 800;
+}
+
+.gg-persona span {
+    font-size: 15px;
+    line-height: 1.7;
+    opacity: 0.88;
+}
+
+@media only screen and (max-width: 767px) {
+    .gg-platforms-grid {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+    }
+
+    .gg-persona {
+        padding: 34px 26px;
+    }
+
+    .gg-persona strong {
+        font-size: 24px;
+    }
+}
