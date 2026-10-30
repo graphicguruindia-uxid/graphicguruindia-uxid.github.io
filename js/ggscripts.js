@@ -90,12 +90,11 @@ var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-moti
         $btn.prop('disabled', true).text('Sending...');
         $.ajax({
             type: "POST",
-            url: "contact.php",
-            //process to mail
+            url: "https://formsubmit.co/ggindia@graphicguru.in",
             data: $form.serialize(),
             success: function(msg) {
                 $form.hide();
-                $("#thanks").html(msg).show();
+                $("#thanks").html(msg.message || "Thank you!").show();
                 $("#thanks")[0].scrollIntoView({ behavior: "smooth", block: "center" });
             },
             error: function() {
