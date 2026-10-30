@@ -3746,6 +3746,21 @@ svg.icon {
     margin: 0;
 }
 
+.gg-cta-caption {
+    font-size: 15px;
+    opacity: 0.85;
+    margin: 8px 0 16px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.gg-cta-message {
+    font-size: 14px;
+    opacity: 0.88;
+    margin: 0;
+    line-height: 1.7;
+}
+
 /* Consistent rhythm between band sections and the CTA card (service pages).
    .gg-stats carries 64px bottom / .cx-section 90px bottom while .gg-cta
    has 0 top padding, leaving an oversized detached gap. Pull the CTA up
@@ -3801,6 +3816,13 @@ svg.icon {
     .gg-cta-title {
         font-size: 27px;
     }
+    .gg-cta-caption {
+        font-size: 14px;
+        margin: 6px 0 12px;
+    }
+    .gg-cta-message {
+        font-size: 13px;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -3839,6 +3861,13 @@ svg.icon {
     }
     .gg-cta-title {
         font-size: 23px;
+    }
+    .gg-cta-caption {
+        font-size: 13px;
+        margin: 6px 0 10px;
+    }
+    .gg-cta-message {
+        font-size: 12px;
     }
     .gg-cta .text-lg-end {
         text-align: center !important;
