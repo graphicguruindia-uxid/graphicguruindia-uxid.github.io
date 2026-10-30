@@ -3499,6 +3499,55 @@ svg.icon {
     color: var(--accent);
 }
 
+/* AI Service Card */
+.gg-service-card-ai {
+    background: linear-gradient(150deg, var(--primary), var(--primary-light));
+    border-color: transparent;
+}
+
+.gg-service-card-ai .gg-service-title,
+.gg-service-card-ai .gg-service-text {
+    color: #ffffff;
+}
+
+.gg-service-card-ai .gg-service-text {
+    opacity: 0.85;
+}
+
+.gg-service-card-ai .gg-service-icon {
+    background: rgba(255, 255, 255, 0.14);
+    color: var(--accent);
+}
+
+.gg-service-card-ai:hover .gg-service-icon {
+    background: var(--accent);
+    color: #ffffff;
+}
+
+.gg-price-ai {
+    background: rgba(255, 255, 255, 0.18);
+    color: #fff;
+}
+
+/* Services CTA */
+.gg-services-cta {
+    text-align: right;
+    margin-top: 24px;
+}
+
+.gg-services-cta .btn {
+    font-size: 13px;
+    padding: 10px 24px;
+}
+
+/* Centered Note */
+.gg-note-center {
+    text-align: center;
+    font-style: italic;
+    color: #8a86a3;
+    margin-top: 16px;
+}
+
 /* Selected Work */
 .gg-work {
     background: #f6f5fb;
