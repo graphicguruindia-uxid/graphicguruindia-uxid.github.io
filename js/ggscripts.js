@@ -92,9 +92,10 @@ var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-moti
             type: "POST",
             url: "https://formsubmit.co/ggindia@graphicguru.in",
             data: $form.serialize(),
+            dataType: "json",
             success: function(msg) {
                 $form.hide();
-                $("#thanks").html(msg.message || "Thank you!").show();
+                $("#thanks").html(msg.message || "Thank you! I'll get back to you within 24 hours.").show();
                 $("#thanks")[0].scrollIntoView({ behavior: "smooth", block: "center" });
             },
             error: function() {
@@ -103,6 +104,18 @@ var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-moti
             }
         });
         return false;
+    });
+
+    // Reveal contact info (WhatsApp/Email) - protects from scrapers
+    $('.gg-reveal-contact').on('click', function(e) {
+        e.preventDefault();
+        var $link = $(this);
+        var type = $link.data('contact');
+        if (type === 'whatsapp') {
+            $link.replaceWith('<a href="https://wa.me/919849180563" target="_blank" rel="noopener">+91 98491 80563</a>');
+        } else if (type === 'email') {
+            $link.replaceWith('<a href="mailto:ggindia@graphicguru.in">ggindia@graphicguru.in</a>');
+        }
     });
 
     // Animate the skill progress bars once when they scroll into view
