@@ -90,7 +90,7 @@ var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-moti
         $btn.prop('disabled', true).text('Sending...');
         $.ajax({
             type: "POST",
-            url: "https://formsubmit.co/ggindia@graphicguru.in",
+            url: "https://formsubmit.app/f/e3bfdcdq6h",
             data: $form.serialize(),
             dataType: "json",
             success: function(msg) {
