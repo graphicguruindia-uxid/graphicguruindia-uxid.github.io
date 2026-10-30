@@ -4169,6 +4169,28 @@ svg.icon {
     margin: 0;
 }
 
+.gg-platform-item h3 a {
+    color: inherit;
+}
+
+.gg-platform-item h3 a:hover {
+    color: var(--primary);
+}
+
+.gg-platform-more {
+    margin-top: 10px !important;
+}
+
+.gg-platform-more a {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.gg-platform-more a:hover {
+    text-decoration: underline;
+}
+
 .gg-persona {
     height: 100%;
     display: flex;
@@ -4283,4 +4305,117 @@ svg.icon {
     font-weight: 600;
     letter-spacing: 0.5px;
     text-transform: uppercase;
+}
+
+/* GRAA-5 Contact page */
+
+.gg-page-title {
+    font-size: 46px;
+    line-height: 1.15;
+    font-weight: 800;
+    color: var(--bg-dark);
+    margin-bottom: 16px;
+}
+
+.gg-page-title span {
+    color: var(--primary);
+}
+
+.gg-page-lead {
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 680px;
+    color: #5d5a72;
+    margin-bottom: 34px;
+}
+
+.gg-contact-grid {
+    margin-top: 10px;
+}
+
+.gg-contact-card {
+    height: 100%;
+    background: #ffffff;
+    border: 1px solid #eceaf6;
+    border-radius: 16px;
+    padding: 30px 28px;
+}
+
+.gg-contact-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--bg-dark);
+    margin-bottom: 18px;
+}
+
+.gg-contact-list {
+    margin: 0 0 20px;
+    display: grid;
+    gap: 16px;
+}
+
+.gg-contact-list li {
+    display: grid;
+    gap: 4px;
+    border-bottom: 1px solid #f0eef8;
+    padding-bottom: 14px;
+}
+
+.gg-contact-list li:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.gg-contact-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: #8a86a3;
+}
+
+.gg-contact-list a,
+.gg-contact-list span:not(.gg-contact-label) {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--bg-dark);
+}
+
+.gg-contact-list a:hover {
+    color: var(--primary);
+}
+
+.gg-contact-note {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #5d5a72;
+}
+
+.gg-form-promise {
+    margin: 18px 0 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #5d5a72;
+}
+
+.gg-form-fallback {
+    margin: 18px 0 0;
+    font-size: 13.5px;
+    line-height: 1.7;
+    color: #5d5a72;
+}
+
+@media only screen and (max-width: 767px) {
+    .gg-page-title {
+        font-size: 32px;
+    }
+
+    .gg-page-lead {
+        font-size: 16px;
+    }
+
+    .gg-contact-card {
+        padding: 24px 20px;
+    }
 }
