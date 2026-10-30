@@ -72,12 +72,16 @@
                             <h2 class="gg-contact-title">Direct contact</h2>
                             <ul class="gg-contact-list">
                                 <li>
+                                    <span class="gg-contact-label">Book a call</span>
+                                    <a href="https://cal.com/graphicguru-india-h7j0tt/30min" target="_blank" rel="noopener" class="gg-cta-link">Schedule 30-min call</a>
+                                </li>
+                                <li>
                                     <span class="gg-contact-label">WhatsApp</span>
-                                    <a href="https://wa.me/919849180563" target="_blank" rel="noopener">+91 98491 80563</a>
+                                    <a href="javascript:void(0)" class="gg-reveal-contact" data-contact="whatsapp">Show WhatsApp</a>
                                 </li>
                                 <li>
                                     <span class="gg-contact-label">Email</span>
-                                    <a href="mailto:ggindia@graphicguru.in">ggindia@graphicguru.in</a>
+                                    <a href="javascript:void(0)" class="gg-reveal-contact" data-contact="email">Show Email</a>
                                 </li>
                                 <li>
                                     <span class="gg-contact-label">Location</span>
@@ -93,9 +97,7 @@
                     <!-- Form -->
                     <div class="col-lg-7">
                         <div class="gg-contact-card">
-                            <form class="contact-form" id="contactForm" action="https://formsubmit.co/ggindia@graphicguru.in" method="POST" novalidate>
-                                    <input type="hidden" name="_captcha" value="false">
-                                    <input type="hidden" name="_json" value="true">
+                            <form class="contact-form" id="contactForm" novalidate>
                                 <div class="form-group" style="margin-bottom:16px;">
                                     <label for="platform" style="font-weight:700;">Which platform do you run? <span style="color:#a00;">*</span></label>
                                     <select class="form-control" id="platform" name="platform" required aria-required="true">
@@ -169,8 +171,8 @@
                             </p>
                             <div id="thanks" style="display:none;margin-top:16px;" role="status" aria-live="polite"></div>
                             <p class="gg-form-fallback">
-                                If the form doesn&rsquo;t send, email <a href="mailto:ggindia@graphicguru.in">ggindia@graphicguru.in</a>
-                                or message <a href="https://wa.me/919849180563" target="_blank" rel="noopener">WhatsApp</a>.
+                                If the form doesn&rsquo;t send, <a href="javascript:void(0)" class="gg-reveal-contact" data-contact="email">show email</a>
+                                or <a href="javascript:void(0)" class="gg-reveal-contact" data-contact="whatsapp">show WhatsApp</a>.
                             </p>
                         </div>
                     </div>
