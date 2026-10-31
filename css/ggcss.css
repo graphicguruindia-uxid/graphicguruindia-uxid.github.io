@@ -3579,6 +3579,55 @@ svg.icon {
     color: var(--accent);
 }
 
+/* AI Service Card */
+.gg-service-card-ai {
+    background: linear-gradient(150deg, var(--primary), var(--primary-light));
+    border-color: transparent;
+}
+
+.gg-service-card-ai .gg-service-title,
+.gg-service-card-ai .gg-service-text {
+    color: #ffffff;
+}
+
+.gg-service-card-ai .gg-service-text {
+    opacity: 0.85;
+}
+
+.gg-service-card-ai .gg-service-icon {
+    background: rgba(255, 255, 255, 0.14);
+    color: var(--accent);
+}
+
+.gg-service-card-ai:hover .gg-service-icon {
+    background: var(--accent);
+    color: #ffffff;
+}
+
+.gg-price-ai {
+    background: rgba(255, 255, 255, 0.18);
+    color: #fff;
+}
+
+/* Services CTA */
+.gg-services-cta {
+    text-align: right;
+    margin-top: 24px;
+}
+
+.gg-services-cta .btn {
+    font-size: 13px;
+    padding: 10px 24px;
+}
+
+/* Centered Note */
+.gg-note-center {
+    text-align: center;
+    font-style: italic;
+    color: #8a86a3;
+    margin-top: 16px;
+}
+
 /* Selected Work */
 .gg-work {
     background: #f6f5fb;
@@ -3826,6 +3875,21 @@ svg.icon {
     margin: 0;
 }
 
+.gg-cta-caption {
+    font-size: 15px;
+    opacity: 0.85;
+    margin: 8px 0 16px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.gg-cta-message {
+    font-size: 14px;
+    opacity: 0.88;
+    margin: 0;
+    line-height: 1.7;
+}
+
 /* Consistent rhythm between band sections and the CTA card (service pages).
    .gg-stats carries 64px bottom / .cx-section 90px bottom while .gg-cta
    has 0 top padding, leaving an oversized detached gap. Pull the CTA up
@@ -3881,6 +3945,13 @@ svg.icon {
     .gg-cta-title {
         font-size: 27px;
     }
+    .gg-cta-caption {
+        font-size: 14px;
+        margin: 6px 0 12px;
+    }
+    .gg-cta-message {
+        font-size: 13px;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -3919,6 +3990,13 @@ svg.icon {
     }
     .gg-cta-title {
         font-size: 23px;
+    }
+    .gg-cta-caption {
+        font-size: 13px;
+        margin: 6px 0 10px;
+    }
+    .gg-cta-message {
+        font-size: 12px;
     }
     .gg-cta .text-lg-end {
         text-align: center !important;
