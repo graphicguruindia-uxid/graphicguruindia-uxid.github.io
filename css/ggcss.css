@@ -2366,6 +2366,86 @@ address {
     box-shadow: 0 8px 24px rgba(70, 40, 186, 0.35);
 }
 
+.footer-bottom .logo img:hover {
+    opacity: 1;
+}
+
+/* Social Row in Footer */
+.social-row-wrapper {
+    padding: 24px 0 12px;
+    border-top: 1px solid rgba(138, 155, 184, 0.12);
+    margin-top: 8px;
+}
+
+.social-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: rgba(138, 155, 184, 0.12);
+    border-radius: 12px;
+    color: #8a9bb8;
+    font-size: 18px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    background: linear-gradient(135deg, #4628ba 0%, #5a3ad8 100%);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(70, 40, 186, 0.35);
+}
+
+.social-btn:focus-visible {
+    outline: 3px solid #f90;
+    outline-offset: 2px;
+}
+
+/* Social Row Responsive */
+@media (max-width: 991px) {
+    .social-row-wrapper {
+        padding: 20px 0 8px;
+        margin-top: 4px;
+    }
+    
+    .social-row {
+        gap: 12px;
+    }
+    
+    .social-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 575px) {
+    .social-row-wrapper {
+        padding: 16px 0 4px;
+    }
+    
+    .social-row {
+        gap: 10px;
+    }
+    
+    .social-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 15px;
+    }
+}
+
 /* Responsive Footer */
 @media (max-width: 991px) {
     .footer {
