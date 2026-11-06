@@ -52,15 +52,7 @@ var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-moti
         return false;
     });
 
-    //Portfolio
-    $('.tiles .view a img').each(function() {
-        var boxWidth = $(this).width(),
-            boxHeight = $(this).height(),
-            scaledHeight = (boxHeight < 180) ? 200 : boxHeight,
-            scaledWidth = boxWidth;
-        (boxWidth > boxHeight) ? $(this).parent().width(parseInt(boxWidth * 180 / scaledHeight)) : $(this).parent().width(parseInt(180 / scaledHeight * boxWidth));
 
-    });
 
     //Filters
     $('#filters > .filter_button').click(function() {
@@ -118,28 +110,9 @@ var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-moti
         }
     });
 
-    // Animate the skill progress bars once when they scroll into view
-    function animateSkillBars() {
-        var viewBottom = $(window).scrollTop() + $(window).height();
-        $('.skill-items .progress-bar').each(function() {
-            var $bar = $(this);
-            if ($bar.data('animated')) return;
-            if (viewBottom > $bar.offset().top + 40) {
-                var width = parseInt($bar.data('width'), 10) || 0;
-                if (prefersReducedMotion) {
-                    $bar.css('width', width + '%').data('animated', true);
-                } else {
-                    $bar.animate({ width: width + '%' }, 1200).data('animated', true);
-                }
-            }
-        });
-    }
-
     // Scroll behaviour: shrink header, highlight the section in the nav, show scroll-to-top
     $(window).on('scroll', function() {
         var scrollPos = $(window).scrollTop();
-
-        animateSkillBars();
 
         // 1. Shrink the header when scrolled down, restore it at the top
         // (body offset stays pinned to full height above, so no resync here)
@@ -170,9 +143,6 @@ var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-moti
             $('#scroll-top').hide();
         }
     });
-
-    // Kick off the progress bars on first paint (in case the section is already visible)
-    animateSkillBars();
 
 	function runCounter(el) {
                 var target = parseInt(el.getAttribute('data-gg-count'), 10) || 0;
