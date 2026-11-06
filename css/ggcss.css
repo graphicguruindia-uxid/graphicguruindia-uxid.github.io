@@ -339,7 +339,7 @@ html {
     color: var(--accent);
 }
 
-.navbar-fixed-top {
+.fixed-top {
     position: fixed;
     top: 0;
     left: 0;
@@ -520,7 +520,7 @@ html {
     z-index: -1;
 }
 
-.navbar-toggle {
+.navbar-toggler {
     position: relative;
     float: right;
     padding: 9px 10px;
@@ -533,23 +533,23 @@ html {
     border-radius: 4px;
 }
 
-.navbar-toggle:focus {
+.navbar-toggler:focus {
     outline: 0;
 }
 
-.navbar-toggle .icon-bar {
+.navbar-toggler .icon-bar {
     display: block;
     width: 22px;
     height: 2px;
     border-radius: 1px;
 }
 
-.navbar-toggle .icon-bar+.icon-bar {
+.navbar-toggler .icon-bar+.icon-bar {
     margin-top: 4px;
 }
 
 @media (min-width: 768px) {
-    .navbar-toggle {
+    .navbar-toggler {
         display: none;
     }
 }
@@ -2820,7 +2820,7 @@ svg.icon {
 }
 
 /* Mobile menu toggle button (Bootstrap 5 collapse) */
-.navbar-toggle {
+.navbar-toggler {
     float: right;
     margin: 16px 10px 0 0;
     padding: 8px 10px;
@@ -2832,12 +2832,12 @@ svg.icon {
     border-radius: 4px;
 }
 
-.navbar-toggle:hover {
+.navbar-toggler:hover {
     background: #f5f5f5;
 }
 
 @media (min-width: 768px) {
-    .navbar-toggle {
+    .navbar-toggler {
         display: none;
     }
 }
@@ -3097,7 +3097,7 @@ svg.icon {
         margin-right: auto;
     }
 
-    #header .navbar-header .navbar-toggle {
+    #header .navbar-header .navbar-toggler {
         margin-left: auto;
         float: none;
         order: 2;
@@ -3110,7 +3110,7 @@ svg.icon {
         align-items: center;
     }
 
-    .navbar-toggle {
+    .navbar-toggler {
         min-height: 44px;
         min-width: 44px;
         display: flex;
