@@ -1,6 +1,5 @@
-# Generated artifacts
-docs/
-plans/
+*.swp
+*.swo
 
 # Environment
 .env
@@ -9,8 +8,6 @@ plans/
 # IDE
 .vscode/
 .idea/
-*.swp
-*.swo
 
 # OS
 .DS_Store
