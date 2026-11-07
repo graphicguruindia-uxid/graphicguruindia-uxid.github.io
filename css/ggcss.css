@@ -160,7 +160,7 @@ html {
 
 .btn.btn-light:hover,
 .btn.btn-light:focus {
-    background: transparent none repeat scroll 0 0;
+    background: #0e2258 none repeat scroll 0 0;
     border: 2px solid #ffffff;
     color: #ffffff;
 }
@@ -2122,9 +2122,9 @@ address {
    Footer - Modern Redesign
    ======================================== */
 .footer {
-    /*background: #0e1a2b;*/
+    /*background: #0e1a2b; padding: 80px 0 0;*/
     color: #b8c5d6;
-    padding: 80px 0 0;
+   
 }
 
 .footer .widget-title {
@@ -2379,11 +2379,11 @@ address {
 
 .social-row {
     display: flex;
-    justify-content: center;
+    /*justify-content: center;*/
     flex-wrap: wrap;
     gap: 14px;
     margin: 0 auto;
-    padding: 0 16px;
+    padding:16px 0;
 }
 
 .social-btn {
