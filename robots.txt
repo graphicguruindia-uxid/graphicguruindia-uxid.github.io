@@ -1,0 +1,5 @@
+# Graphicguru.in - robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://graphicguru.in/sitemap.xml

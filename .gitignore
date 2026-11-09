@@ -13,6 +13,9 @@
 .DS_Store
 Thumbs.db
 
+# Scratch (never commit)
+docs/
+
 # Logs
 *.log
 npm-debug.log*
