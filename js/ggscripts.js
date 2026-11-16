@@ -91,7 +91,7 @@ var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-moti
                 $("#thanks")[0].scrollIntoView({ behavior: "smooth", block: "center" });
             },
             error: function() {
-                $("#thanks").html('<p class="alert alert-danger">Your message couldn\'t be delivered. Please email <a href="mailto:ggindia@graphicguru.in">ggindia@graphicguru.in</a> or message <a href="https://wa.me/919849180563">WhatsApp</a>.</p>').show();
+                $("#thanks").html('<p class="alert alert-danger">Your message couldn\'t be delivered. Please email <a href="mailto:ggindia@graphicguru.in">ggindia@graphicguru.in</a> or message <a href="https://graphicguru.in/wa.html">WhatsApp</a>.</p>').show();
                 $btn.prop('disabled', false).text('Send message');
             }
         });
@@ -104,7 +104,7 @@ var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-moti
         var $link = $(this);
         var type = $link.data('contact');
         if (type === 'whatsapp') {
-            $link.replaceWith('<a href="https://wa.me/919849180563" target="_blank" rel="noopener">+91 98491 80563</a>');
+            $link.replaceWith('<a href="https://graphicguru.in/wa.html" target="_blank" rel="noopener">+91 98491 80563</a>');
         } else if (type === 'email') {
             $link.replaceWith('<a href="mailto:ggindia@graphicguru.in">ggindia@graphicguru.in</a>');
         }
